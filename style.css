@@ -1,3 +1,9 @@
+:root{
+    --primary-color: 0, 0, 0;
+    --secondary-color: #ffffff;
+    --tertiary-color: #C50102;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,16 +14,15 @@
 body {
     display: grid;
     grid-template: 100% / 100%; ;
-    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);   */
-    background-color: grey;
+    background: radial-gradient(ellipse, rgba(var(--primary-color), 0.1), rgba(var(--primary-color), 0.3), rgba(var(--primary-color), 0.5)); 
     min-height: 100vh;
 }
 
 .container {
     display: grid;
     grid-template: 20% 80% / 100%;  
-    background: white;  
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+    background: var(--secondary-color);  
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
     width: 100%;
     grid-area: 1/1/2/2;
 }
@@ -25,8 +30,13 @@ body {
 .logo {
     display: grid;
     place-items: center;
-    background: #8b5cf6;
-    color: white;
+    background: rgba(var(--primary-color), 0.6);
+    color: var(--secondary-color);
+}
+
+img{
+    width: 200px;
+    height: auto;
 }
 
 .sign-up{
@@ -68,7 +78,7 @@ button{
 }
 
 .btn-btn1{
-    background: #8b5cf6;
+    background: rgba(var(--primary-color), 0.6);
     color: white;
     cursor: pointer;
     font-weight: bold;
@@ -76,6 +86,7 @@ button{
 
 a{
     text-decoration: none;
+    color: var(--tertiary-color);
 }
 
 .sign-in{
@@ -84,8 +95,8 @@ a{
 }
 
 @media screen and (min-width: 768px) {
-    .logo h1{
-        font-size: 50px;
+    img{
+        width: 220px;
     }
     .sign-up{
         padding: 30px 100px;
@@ -110,8 +121,8 @@ a{
         order: 1;
         border-radius: 0 15px 15px 0;
     }
-    .logo h1{
-        font-size: 3.5em;
+    img{
+        width: 250px;
     }
     .sign-up{
         padding: 30px 30px;
@@ -130,6 +141,9 @@ a{
         grid-template: 100% / 50% 50%;
         max-width: 1280px;
     }
+    img{
+        width: 300px;
+    }
     .sign-up{
         padding: 15px 50px;
     }
@@ -143,8 +157,8 @@ a{
     .container{
         max-width: 1440px;
     }
-    .logo h1{
-        font-size: 5em;
+    img{
+        width: 350px;
     }
     .sign-up{
         padding: 30px 50px;
