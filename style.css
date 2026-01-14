@@ -1,10 +1,10 @@
-:root{
+:root {
     --primary-color: 0, 0, 0;
     --secondary-color: #ffffff;
     --tertiary-color: #C50102;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,16 +13,17 @@
 
 body {
     display: grid;
-    grid-template: 100% / 100%; ;
-    background: radial-gradient(ellipse, rgba(var(--primary-color), 0.1), rgba(var(--primary-color), 0.3), rgba(var(--primary-color), 0.5)); 
+    grid-template: 100% / 100%;
+    ;
+    background: radial-gradient(ellipse, rgba(var(--primary-color), 0.1), rgba(var(--primary-color), 0.3), rgba(var(--primary-color), 0.5));
     min-height: 100vh;
 }
 
 .container {
     display: grid;
-    grid-template: 20% 80% / 100%;  
-    background: var(--secondary-color);  
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+    grid-template: 20% 80% / 100%;
+    background: var(--secondary-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     width: 100%;
     grid-area: 1/1/2/2;
 }
@@ -34,27 +35,28 @@ body {
     color: var(--secondary-color);
 }
 
-img{
+img {
     width: 200px;
     height: auto;
 }
 
-.sign-up{
+.sign-up {
     display: grid;
     grid-template: 15% 80% 5% / 100%;
     padding: 15px 30px;
 }
 
-form{
+form {
     display: grid;
-    grid-template: repeat(6, auto) / 100%;
+    grid-template: repeat(5, auto) / 100%;
 }
 
-label{
-    font-weight:500;
+label {
+    font-weight: 500;
 }
 
-input, button{
+input,
+button {
     width: 100%;
     min-height: 40px;
     max-height: 50px;
@@ -62,46 +64,58 @@ input, button{
     padding: 5px;
 }
 
-input{
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+input {
     border: 1px solid grey;
 }
 
-#actions{
+#actions {
     display: grid;
     grid-template: repeat(2, auto)/ 100%;
     row-gap: 10px;
 }
 
-button{
+button {
     border: none;
     font-weight: bold;
 }
 
-.btn-btn1{
+.btn-btn1 {
     background: rgba(var(--primary-color), 0.6);
     color: white;
     cursor: pointer;
     font-weight: bold;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--tertiary-color);
 }
 
-.sign-in{
+.sign-in {
     text-align: center;
     font-size: small;
 }
 
+.error {
+    border: 2px solid red !important;
+}
+
 @media screen and (min-width: 768px) {
-    img{
+    img {
         width: 220px;
     }
-    .sign-up{
+
+    .sign-up {
         padding: 30px 100px;
     }
-    input, button{
+
+    input,
+    button {
         min-height: 50px;
         max-height: 60px;
     }
@@ -109,25 +123,33 @@ a{
 
 @media screen and (min-width: 1024px) {
     body {
-        grid-template: 10% 80% 10% / 15% 70% 15%;
+        grid-template: 10% 80% 10% / 20% 60% 20%;
     }
-    .container{
+
+    .container {
         grid-template: 100% / 50% 50%;
         grid-area: 2/2/3/3;
         border-radius: 5px;
         max-width: 1024px;
     }
-    .logo{
+
+    .logo {
         order: 1;
         border-radius: 0 5px 5px 0;
     }
-    img{
+
+    img {
         width: 250px;
     }
-    .sign-up{
-        padding: 30px 30px;
+
+    .sign-up {
+        grid-template: 15% 75% 5% / 100%;
+        padding: 10px 35px;
+        gap: 10px;
     }
-    input, button{
+
+    input,
+    button {
         min-height: 30px;
         max-height: 40px;
     }
@@ -137,34 +159,43 @@ a{
     body {
         grid-template: 10% 80% 10% / 20% 60% 20%;
     }
-    .container{
+
+    .container {
         grid-template: 100% / 50% 50%;
         max-width: 1280px;
     }
-    img{
+
+    img {
         width: 300px;
     }
-    .sign-up{
-        padding: 15px 50px;
+
+    .sign-up {
+        padding: 30px 40px;
     }
-    input, button{
+
+    input,
+    button {
         min-height: 35px;
         max-height: 45px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .container{
+    .container {
         max-width: 1440px;
     }
-    img{
+
+    img {
         width: 350px;
     }
-    .sign-up{
+
+    .sign-up {
         padding: 30px 50px;
     }
-    input, button{
+
+    input,
+    button {
         min-height: 50px;
         max-height: 60px;
-    }    
+    }
 }
