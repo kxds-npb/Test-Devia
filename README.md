@@ -23,6 +23,6 @@ Creation d'un formulaire d'inscription moderne  et responsive, tout en respectan
 
 ## Rendu-Final
 
-<video controls src="autres/demo-video.mp4" title="Title"></video>
+![Image du formulaire](autres/image-formulaire.png)
 
 Lien vers l'application pour la demo en live: [Cliquez ici pour la demo !!!](https://test-devia.vercel.app/)
